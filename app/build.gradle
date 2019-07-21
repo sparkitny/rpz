@@ -1,0 +1,195 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+buildscript {
+
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    google()
+    maven { url "https://jitpack.io" }
+    maven { url 'http://dl.bintray.com/madcyph3r/maven/' }
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    lintOptions {
+        checkReleaseBuilds true
+        absolutePaths true
+        checkAllWarnings true
+        explainIssues true
+        noLines false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError true
+    }
+
+    defaultConfig {
+        applicationId 'de.parkitny.rpz'
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 20
+        versionName "1.6.13"
+        multiDexEnabled false
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+    }
+    sourceSets {
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+    compileOptions {
+        incremental true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            applicationIdSuffix ".debug"
+            crunchPngs true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    dexOptions {
+        preDexLibraries true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.orhanobut:logger:2.2.0'
+    // livedata
+    def lifecycle_version = "1.1.1"
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
+    implementation "android.arch.lifecycle:reactivestreams:$lifecycle_version"
+
+    // android room
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+    implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+    // rx bindings
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+    // joda time
+    implementation 'joda-time:joda-time:2.9.9'
+    // iconics
+    implementation 'com.mikepenz:itemanimators:1.0.0@aar'
+    implementation 'com.mikepenz:iconics-core:3.0.4@aar'
+    implementation 'com.mikepenz:iconics-views:3.0.2@aar'
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.2.original@aar'
+    implementation 'com.mikepenz:material-design-iconic-typeface:2.2.0.4@aar'
+    implementation 'com.mikepenz:fontawesome-typeface:5.0.6.0@aar'
+    implementation 'com.mikepenz:octicons-typeface:3.2.0.4@aar'
+    implementation 'com.mikepenz:meteocons-typeface:1.1.0.4@aar'
+    implementation 'com.mikepenz:community-material-typeface:2.0.46.1@aar'
+    implementation 'com.mikepenz:weather-icons-typeface:2.0.10.4@aar'
+    implementation 'com.mikepenz:typeicons-typeface:2.0.7.4@aar'
+    implementation 'com.mikepenz:entypo-typeface:1.0.0.4@aar'
+    implementation 'com.mikepenz:devicon-typeface:2.0.0.4@aar'
+    implementation 'com.mikepenz:foundation-icons-typeface:3.0.0.4@aar'
+    implementation 'com.mikepenz:ionicons-typeface:2.0.1.4@aar'
+    implementation 'com.mikepenz:pixeden-7-stroke-typeface:1.2.0.2@aar'
+    // fastadapter
+    implementation 'com.mikepenz:fastadapter:3.2.7@aar'
+    implementation 'com.mikepenz:fastadapter-commons:3.2.7@aar'
+    implementation 'com.mikepenz:fastadapter-extensions:3.2.7@aar'
+    implementation 'com.mikepenz:fastadapter-extensions-expandable:3.2.7@aar'
+
+    implementation 'com.mikepenz:materialize:1.1.2@aar'
+    implementation('com.mikepenz:aboutlibraries:6.0.9@aar') {
+        transitive = true
+    }
+
+    //---------------------------------------------------------
+    // butterknife
+    implementation 'com.jakewharton:butterknife:9.0.0-rc3'
+    kapt 'com.jakewharton:butterknife-compiler:9.0.0-rc3'
+    // android support libraries and fixes
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.takisoft.fix:preference-v7:28.0.0.0'
+    implementation 'com.android.support:support-compat:28.0.0'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'com.github.medyo:fancybuttons:1.9.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.tramsun.libs:prefcompat:0.9.2'
+    implementation 'com.github.eltos:simpledialogfragment:3.0'
+    implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+    debugImplementation 'com.github.whataa:pandora:1.2.2'
+    releaseImplementation 'com.github.whataa:pandora-no-op:1.2.2'
+    implementation 'com.github.10uroi:ToastOX:1.0.1'
+    implementation 'com.gregacucnik:edittextview:1.6'
+    implementation 'com.dmitrymalkovich.android:material-design-dimens:1.4'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.snatik:storage:2.1.0'
+    implementation 'com.alibaba:fastjson:1.2.38'
+    implementation 'com.code-troopers.betterpickers:library:3.1.0'
+    implementation 'mobi.upod:time-duration-picker:1.1.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'io.github.microutils:kotlin-logging:1.4.9'
+    implementation 'com.beardedhen:androidbootstrap:2.3.2'
+    implementation 'com.github.wooplr:Spotlight:1.2.3'
+    implementation 'com.github.Shashank02051997:FancyWalkthrough-Android:2.1'
+    implementation 'com.github.nekocode:Badge:2.0'
+    implementation 'com.eightbitlab:bottomnavigationbar:0.9.5'
+
+    implementation 'com.nex3z:flow-layout:1.2.4'
+    implementation 'lib.kingja.switchbutton:switchbutton:1.1.7'
+
+    api 'com.google.guava:guava:26.0-android'
+    implementation 'pl.hypeapp:materialtimelineview:1.1'
+    implementation 'com.libizo:customedittext:1.0.4'
+
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '28.0.0'
+            }
+        }
+    }
+}

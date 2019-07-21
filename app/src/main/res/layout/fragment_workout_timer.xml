@@ -1,0 +1,215 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="de.parkitny.fit.myfit.app.ui.workout.WorkoutTimerFragment">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        fancy:layout_constraintEnd_toEndOf="parent"
+        fancy:layout_constraintStart_toStartOf="parent"
+        fancy:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/current_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="00m00s"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            fancy:layout_constraintBottom_toBottomOf="parent"
+            fancy:layout_constraintEnd_toEndOf="@+id/workout_timer_total"
+            fancy:layout_constraintHorizontal_bias="0.5"
+            fancy:layout_constraintStart_toStartOf="@+id/workout_timer_total"
+            fancy:layout_constraintTop_toBottomOf="@+id/workout_timer_total" />
+
+        <TextView
+            android:id="@+id/current_exercise_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:text="------"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            fancy:layout_constraintBottom_toBottomOf="parent"
+            fancy:layout_constraintEnd_toEndOf="@+id/workout_timer_exercise"
+            fancy:layout_constraintHorizontal_bias="0.5"
+            fancy:layout_constraintStart_toStartOf="@+id/workout_timer_exercise"
+            fancy:layout_constraintTop_toBottomOf="@+id/workout_timer_exercise" />
+
+        <TextView
+            android:id="@+id/exercise_sets_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/set_info"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            fancy:layout_constraintEnd_toEndOf="@+id/workout_timer_total"
+            fancy:layout_constraintHorizontal_bias="0.5"
+            fancy:layout_constraintStart_toStartOf="@+id/workout_timer_total"
+            fancy:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/routine_rounds_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/rounds_info"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            fancy:layout_constraintEnd_toEndOf="@+id/workout_timer_exercise"
+            fancy:layout_constraintHorizontal_bias="0.5"
+            fancy:layout_constraintStart_toStartOf="@+id/workout_timer_exercise"
+            fancy:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/workout_timer_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/workout_time_total"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Info"
+            fancy:layout_constraintEnd_toEndOf="parent"
+            fancy:layout_constraintHorizontal_bias="0.25"
+            fancy:layout_constraintStart_toStartOf="parent"
+            fancy:layout_constraintTop_toBottomOf="@+id/exercise_sets_text_view" />
+
+        <TextView
+            android:id="@+id/workout_timer_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/workout_time_exercise"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Info"
+            fancy:layout_constraintEnd_toEndOf="parent"
+            fancy:layout_constraintHorizontal_bias="0.75"
+            fancy:layout_constraintStart_toStartOf="parent"
+            fancy:layout_constraintTop_toBottomOf="@+id/routine_rounds_info" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/workout_timer_list_exercises"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        fancy:layout_constraintBottom_toTopOf="@+id/buttons_layout"
+        fancy:layout_constraintEnd_toEndOf="parent"
+        fancy:layout_constraintStart_toStartOf="parent"
+        fancy:layout_constraintTop_toBottomOf="@+id/time_layout" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="2dp"
+        fancy:layout_constraintBottom_toBottomOf="parent"
+        fancy:layout_constraintEnd_toEndOf="parent"
+        fancy:layout_constraintHorizontal_bias="1.0"
+        fancy:layout_constraintStart_toStartOf="parent"
+        fancy:layout_constraintTop_toBottomOf="@+id/workout_timer_list_exercises">
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/workout_timer_button_stop_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/workout_timer_button_start_workout"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text=""
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="?attr/myAccent"
+            fancy:fb_focusColor="?attr/myPrimDark"
+            fancy:fb_iconPosition="left"
+            fancy:fb_fontIconResource="&#xf256;"
+            fancy:fb_fontIconSize="30dp"
+            fancy:fb_radius="20dp"
+            fancy:fb_textColor="#FFFFFF"
+            fancy:layout_constraintBottom_toBottomOf="@+id/workout_timer_button_start_workout"
+            fancy:layout_constraintStart_toStartOf="parent"
+            fancy:layout_constraintTop_toTopOf="@+id/workout_timer_button_start_workout" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/workout_timer_button_start_workout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text=""
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="?attr/myAccent"
+            fancy:fb_focusColor="?attr/myPrimDark"
+            fancy:fb_iconPosition="left"
+            fancy:fb_fontIconResource="&#xf04b;"
+            fancy:fb_fontIconSize="30dp"
+            fancy:fb_radius="20dp"
+            fancy:fb_textColor="#FFFFFF"
+            fancy:layout_constraintBottom_toBottomOf="parent"
+            fancy:layout_constraintEnd_toEndOf="parent"
+            fancy:layout_constraintStart_toStartOf="@+id/workout_timer_button_stop_workout"
+            fancy:layout_constraintTop_toTopOf="parent" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/workout_timer_button_next_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/workout_timer_button_start_workout"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/workout_timer_button_start_workout"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text=""
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="?attr/myAccent"
+            fancy:fb_focusColor="?attr/myPrimDark"
+            fancy:fb_iconPosition="left"
+            fancy:fb_fontIconResource="&#xf051;"
+            fancy:fb_fontIconSize="30dp"
+            fancy:fb_radius="20dp"
+            fancy:fb_textColor="#FFFFFF"
+            fancy:layout_constraintBottom_toBottomOf="@+id/workout_timer_button_start_workout"
+            fancy:layout_constraintEnd_toEndOf="parent"
+            fancy:layout_constraintTop_toTopOf="@+id/workout_timer_button_start_workout" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

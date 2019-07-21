@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themes_list_names">
+        <item>Fitness</item>
+        <item>Yoga</item>
+    </string-array>
+    <string-array name="themes_list_values">
+        <item>Fitness</item>
+        <item>Yoga</item>
+    </string-array>
+
+    <string name="chest_press">Bench press|BREAST,PUSH</string>
+    <string name="fly">Fly|BREAST,PUSH</string>
+    <string name="ab_roller">Ab Roller|CORE</string>
+    <string name="bizeps_curls">Bizeps Curls|ARMS,PULL</string>
+    <string name="hyperextension">Hyperextension|LOWER_BACK</string>
+    <string name="one_handed_row">Dumbbell Row|UPPER_BACK,PULL</string>
+    <string name="reverse_fly">Reverse Fly|UPPER_BACK,PULL</string>
+    <string name="squats">Squats|LEGS</string>
+    <string name="russian_twist">Russian Twist|CORE</string>
+    <string name="shoulder_press">Shoulder press|SHOULDER</string>
+    <string name="trizeps_extension">Trizeps Extension|ARMS,PUSH</string>
+    <string name="u_form">U-Form|UPPER_BACK</string>
+    <string name="push_ups">Push up|BREAST,PUSH</string>
+    <string name="pull_ups">Pull up|UPPER_BACK,PULL</string>
+    <string name="deadlift">Deadlift|LOWER_BACK,CORE</string>
+    <string name="sit_ups">Sit-Ups|CORE</string>
+    <string name="burpees">Burpees|CORE|LEGS|PUSH|LOWER_BACK</string>
+</resources>

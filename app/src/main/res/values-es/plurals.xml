@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="rounds">
+        <item quantity="one">
+            vuelta
+        </item>
+        <item quantity="other">
+            vueltas
+        </item>
+    </plurals>
+    <plurals name="sets">
+         <item quantity="one">
+            Conjunto
+        </item>
+        <item quantity="other">
+            Conjuntos
+        </item>
+    </plurals>
+    <plurals name="exercises">
+        <item quantity="one">
+            exercise
+        </item>
+        <item quantity="other">
+            exercises
+        </item>
+    </plurals>
+</resources>

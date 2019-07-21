@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mylayout" type="id" />
+    <item name="emphasis_item" type="id" />
+    <item name="workout_history_item_group" type="id" />
+    <item name="mini_history_item" type="id" />
+    <item name="workout_history_item" type="id" />
+    <item name="header_item" type="id" />
+    <item name="exercise_item" type="id" />
+    <item name="flex_two_line_item" type="id" />
+    <item name="flex_three_line_item" type="id" />
+</resources>

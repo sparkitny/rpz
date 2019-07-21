@@ -1,0 +1,111 @@
+<resources>
+
+
+    <style name="Women" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="preferenceTheme">@style/Theme.WtfPreference</item>
+        <item name="colorPrimary">?attr/myPrim</item>
+        <item name="colorPrimaryDark">?attr/myPrimDark</item>
+        <item name="colorAccent">?attr/myAccent</item>
+        <item name="background">?attr/myBackColor</item>
+
+        <item name="beep">@raw/women</item>
+        <item name="header">@drawable/header</item>
+        <item name="background_workout">@drawable/womens_background_workout</item>
+        <item name="background_statistics">@drawable/womens_background_statistics</item>
+        <item name="dashboard_exercise">@drawable/wordcloud_yoga_man</item>
+        <item name="dashboard_routine">@drawable/dashboard_routine_black</item>
+        <item name="dashboard_workout">@drawable/dashboard_clock_black</item>
+        <item name="dashboard_history">@drawable/dashboard_trending_black</item>
+
+        <item name="icon_exercise">@mipmap/yoga_man_black</item>
+        <item name="icon_routine">@drawable/ic_format_list_numbered_black_36dp</item>
+        <item name="icon_workout">@drawable/ic_timer_black_36dp</item>
+        <item name="icon_statistics">@drawable/ic_trending_up_red_500_48dp</item>
+        <item name="icon_delete">@drawable/ic_delete_black_18dp</item>
+        <item name="icon_bug">@drawable/ic_bug_report_black_18dp</item>
+
+        <item name="myPrim">@color/md_lime_400</item>
+        <item name="myPrimDark">@color/md_lime_600</item>
+        <item name="myAccent">@color/md_purple_400</item>
+        <item name="myBackColor">@color/white</item>
+        <item name="myChartBack">@color/white</item>
+        <item name="myDisabled">@color/md_grey_800</item>
+        <item name="myTextColor">@color/md_grey_900</item>
+        <item name="myTextColorBright">@color/md_grey_200</item>
+
+        <!--<item name="android:fontFamily">@font/exo</item>-->
+    </style>
+
+    <style name="Men" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!--<item name="android:fontFamily">@font/exo</item>-->
+        <item name="preferenceTheme">@style/Theme.WtfPreference</item>
+        <item name="colorPrimary">?attr/myPrim</item>
+        <item name="colorPrimaryDark">?attr/myPrimDark</item>
+        <item name="colorAccent">?attr/myAccent</item>
+        <item name="background">?attr/myBackColor</item>
+
+        <item name="beep">@raw/women</item>
+        <item name="header">@drawable/header</item>
+        <item name="background_workout">@drawable/womens_background_workout</item>
+        <item name="background_statistics">@drawable/womens_background_statistics</item>
+        <item name="dashboard_exercise">@drawable/wordcloud_yoga_man</item>
+        <item name="dashboard_routine">@drawable/dashboard_routine_black</item>
+        <item name="dashboard_workout">@drawable/dashboard_clock_black</item>
+        <item name="dashboard_history">@drawable/dashboard_trending_black</item>
+
+        <item name="icon_exercise">@mipmap/yoga_man_black</item>
+        <item name="icon_routine">@drawable/ic_format_list_numbered_black_36dp</item>
+        <item name="icon_workout">@drawable/ic_timer_black_36dp</item>
+        <item name="icon_statistics">@drawable/ic_trending_up_red_500_48dp</item>
+        <item name="icon_delete">@drawable/ic_delete_black_18dp</item>
+        <item name="icon_bug">@drawable/ic_bug_report_black_18dp</item>
+
+        <item name="myPrim">@color/md_light_blue_400</item>
+        <item name="myPrimDark">@color/material_light_blue_600</item>
+        <item name="myAccent">@color/material_red_400</item>
+        <item name="myBackColor">@color/white</item>
+        <item name="myChartBack">@color/white</item>
+        <item name="myDisabled">@color/md_grey_800</item>
+        <item name="myTextColor">@color/md_grey_900</item>
+        <item name="myTextColorBright">@color/md_grey_200</item>
+    </style>
+
+    <style name="standard_margin">
+        <item name="android:layout_margin">@dimen/standard_margin</item>
+    </style>
+
+    <style name="dashboard_elements">
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">30dp</item>
+    </style>
+
+    <style name="dashboard_elements_vertical">
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="Theme.WtfPreference" parent="@style/PreferenceThemeOverlay">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen</item>
+        <item name="preferenceFragmentStyle">@style/PreferenceFragment</item>
+        <item name="preferenceCategoryStyle">@style/Preference.Category</item>
+        <item name="preferenceStyle">@style/Preference</item>
+        <item name="preferenceInformationStyle">@style/Preference.Information</item>
+        <item name="checkBoxPreferenceStyle">@style/Preference.CheckBoxPreference</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat</item>
+        <item name="dialogPreferenceStyle">@style/Preference.DialogPreference</item>
+        <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.EditTextPreference
+        </item>
+        <item name="preferenceFragmentListStyle">@style/PreferenceFragmentList</item>
+    </style>
+
+    <style name="Women.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Women.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppBarFont">
+        <item name="android:fontFamily">@font/bowlby</item>
+    </style>
+
+</resources>

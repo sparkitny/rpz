@@ -1,0 +1,134 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.routine.RoutineDetail">
+
+    <TextView
+        android:id="@+id/routineDetail_roundsHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/routineDetail_rounds"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/routineDetail_rounds"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="20dp"
+        android:hint="@string/routineDetail_rounds"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/rounds_decrement_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/routineDetail_roundsHint" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/rounds_decrement_button"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/routineDetail_rounds"
+        app:layout_constraintEnd_toStartOf="@+id/rounds_increment_button"
+        app:layout_constraintTop_toTopOf="@+id/routineDetail_rounds"
+        fancy:fb_borderColor="#FFFFFF"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="?attr/myAccent"
+        fancy:fb_focusColor="?attr/myPrimDark"
+        fancy:fb_iconPosition="left"
+        fancy:fb_iconResource="@drawable/ic_remove_white_24dp"
+        fancy:fb_radius="4dp"
+        fancy:fb_textColor="#FFFFFF" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/rounds_increment_button"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/rounds_decrement_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rounds_decrement_button"
+        fancy:fb_borderColor="#FFFFFF"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="?attr/myAccent"
+        fancy:fb_focusColor="?attr/myPrimDark"
+        fancy:fb_iconPosition="left"
+        fancy:fb_iconResource="@drawable/ic_add_white_24dp"
+        fancy:fb_radius="4dp"
+        fancy:fb_textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/routineDetail_setPauseHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/set_pause"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="@+id/routineDetail_roundsHint"
+        app:layout_constraintTop_toBottomOf="@+id/routineDetail_rounds" />
+
+    <TextView
+        android:id="@+id/routineDetail_setPause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="@dimen/icon_padding"
+        android:hint="@string/set_pause"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/rounds_increment_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/routineDetail_rounds"
+        app:layout_constraintTop_toBottomOf="@+id/routineDetail_setPauseHint" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/exercise_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/routineDetail_rounds"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/routineDetail_setPause" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_exercise_to_routine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/floating_button_margin"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_add_white_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

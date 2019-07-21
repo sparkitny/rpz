@@ -1,0 +1,185 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/myBackColor"
+    android:orientation="vertical"
+    tools:context=".ui.routine.ExerciseConfigurationFragment">
+
+    <TextView
+        android:id="@+id/chosen_exercise_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/border_bottom"
+        android:text="@string/exercise"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/chosen_exercise_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chosen_exercise_text"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/chosen_exercise_text"
+        app:layout_constraintStart_toStartOf="@+id/chosen_exercise_text"
+        app:layout_constraintTop_toBottomOf="@+id/chosen_exercise_text"
+        app:ms_background_color="?attr/myBackColor"
+        app:ms_dropdown_max_height="250dp" />
+
+    <TextView
+        android:id="@+id/fragment_exercise_configuration_text_exercise_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chosen_exercise_spinner"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/border_bottom"
+        android:text="@string/exerciseconfiguration_exercise_type_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/chosen_exercise_spinner"
+        app:layout_constraintStart_toStartOf="@+id/chosen_exercise_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/chosen_exercise_spinner" />
+
+    <lib.kingja.switchbutton.SwitchMultiButton
+        android:id="@+id/exerciseconfiguration_exercise_type_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_exercise_configuration_text_exercise_type"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_exercise_configuration_text_exercise_type"
+        app:layout_constraintStart_toStartOf="@+id/fragment_exercise_configuration_text_exercise_type"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_exercise_configuration_text_exercise_type"
+        app:selectedColor="?attr/myAccent"
+        app:selectedTab="0"
+        app:strokeRadius="5dp"
+        app:strokeWidth="1dp"
+        app:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/exercise_type_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/chosen_exercise_text"
+        app:layout_constraintStart_toStartOf="@+id/chosen_exercise_text"
+        app:layout_constraintTop_toBottomOf="@+id/exerciseconfiguration_exercise_type_value">
+
+        <com.gregacucnik.EditTextView
+            android:id="@+id/numberfield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:ettEmptyTexStyle="bold"
+            app:ettEmptyText="@string/repetition"
+            app:ettIcon="@drawable/ic_format_list_numbered_black_24dp"
+            app:ettShowHint="true" />
+
+        <LinearLayout
+            android:id="@+id/time_field_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_timer_black_24dp" />
+
+            <TextView
+                android:id="@+id/time_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:text="00m 00s"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.gregacucnik.EditTextView
+        android:id="@+id/exercise_configuration_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"
+        app:ettEmptyText="@string/exercise_weight"
+        app:ettIcon="@mipmap/weight_kilogram"
+        app:layout_constraintEnd_toEndOf="@+id/chosen_exercise_text"
+        app:layout_constraintStart_toStartOf="@+id/chosen_exercise_text"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_type_layout" />
+
+    <TextView
+        android:id="@+id/text_set_pause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/set_pause"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/edit_icon"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="@+id/chosen_exercise_text"
+        app:layout_constraintTop_toBottomOf="@+id/exercise_configuration_weight" />
+
+    <ImageView
+        android:id="@+id/edit_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_edit_black_18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_switch"
+        app:layout_constraintEnd_toStartOf="@+id/edit_switch"
+        app:layout_constraintTop_toTopOf="@+id/edit_switch" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/edit_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/text_set_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_set_pause" />
+
+    <com.gregacucnik.EditTextView
+        android:id="@+id/set_pause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:inputType="number"
+        app:ettEmptyText="@string/set_pause"
+        app:ettIcon="@drawable/ic_snooze_black_24dp"
+        app:layout_constraintEnd_toEndOf="@id/chosen_exercise_text"
+        app:layout_constraintStart_toStartOf="@+id/chosen_exercise_text"
+        app:layout_constraintTop_toBottomOf="@id/text_set_pause" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/exerciseconfiguration_button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/floating_button_margin"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_done_white_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

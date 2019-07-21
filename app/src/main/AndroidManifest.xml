@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="de.parkitny.fit.myfit.app">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".RpzApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Men"
+        tools:replace="android:icon,android:theme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAI-Sye82qFvV899a3ka-oRLKRem5QMb-vGzXvxcg" />
+
+        <activity
+            android:name=".ui.RpzNavDrawer"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".utils.StopWatchService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1f832ffb088a3a9a3985a5fc46d2295d2a33d539" />
+
+        <activity android:name=".ui.showcase.ShowcaseActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action andrfirstLinename="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category andrfirstLinename="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <receiver
+            android:name=".utils.RpzBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

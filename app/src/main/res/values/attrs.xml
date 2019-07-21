@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="header" format="reference" />
+    <attr name="beep" format="reference" />
+    <attr name="background_workout" format="reference" />
+    <attr name="background_statistics" format="reference" />
+    <attr name="dashboard_exercise" format="reference" />
+    <attr name="dashboard_routine" format="reference" />
+    <attr name="dashboard_workout" format="reference" />
+    <attr name="dashboard_history" format="reference" />
+
+    <attr name="icon_exercise" format="reference" />
+    <attr name="icon_routine" format="reference" />
+    <attr name="icon_workout" format="reference" />
+    <attr name="icon_statistics" format="reference" />
+    <attr name="icon_delete" format="reference" />
+    <attr name="icon_bug" format="reference" />
+
+    <attr name="myPrim" format="color|reference" />
+    <attr name="myPrimDark" format="color|reference" />
+    <attr name="myAccent" format="color|reference" />
+    <attr name="myBackColor" format="color|reference" />
+    <attr name="myChartBack" format="color|reference" />
+    <attr name="myDisabled" format="color|reference" />
+    <attr name="myTextColor" format="color|reference" />
+    <attr name="myTextColorBright" format="color|reference" />
+</resources>

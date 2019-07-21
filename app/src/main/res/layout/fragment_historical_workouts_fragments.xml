@@ -1,0 +1,101 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:id="@+id/workout_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:iiv_color="?attr/myAccent"
+        app:iiv_icon="cmd-dumbbell"
+        app:layout_constraintEnd_toStartOf="@+id/workout_name_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/workout_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="40dp"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/workout_icon" />
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:id="@+id/workout_time_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:iiv_color="?attr/myAccent"
+        app:iiv_icon="gmd-timer"
+        app:iiv_size="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workout_icon" />
+
+    <TextView
+        android:id="@+id/workout_time_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_time_icon"
+        app:layout_constraintEnd_toStartOf="@+id/workout_pause_icon"
+        app:layout_constraintStart_toEndOf="@+id/workout_time_icon"
+        app:layout_constraintTop_toTopOf="@+id/workout_time_icon" />
+
+    <com.mikepenz.iconics.view.IconicsImageView
+        android:id="@+id/workout_pause_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:iiv_size="16dp"
+        android:layout_marginStart="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:iiv_color="?attr/myAccent"
+        app:iiv_icon="gmd-pause"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_time_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/workout_time_icon" />
+
+    <TextView
+        android:id="@+id/workout_pause_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/workout_time_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/workout_pause_icon"
+        app:layout_constraintTop_toTopOf="@+id/workout_time_icon" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/workout_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workout_time_text" />
+
+</android.support.constraint.ConstraintLayout>

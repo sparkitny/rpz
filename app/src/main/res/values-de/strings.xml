@@ -1,0 +1,173 @@
+<resources>
+    <string name="app_name">rpz</string>
+
+    <string name="action_settings">Einstellungen</string>
+    <string name="title_activity_fit_nav_drawer">rpz</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Beispielübung</string>
+
+    <string name="exercise_name">Name der Übung</string>
+    <string name="exercise_detail_text_description">Beschreibung</string>
+
+
+    <string name="exercises">Übungen</string>
+    <string name="routines">Routinen</string>
+    <string name="workouts">Workouts</string>
+
+    <string name="exercise_saved">Übung %s gespeichert</string>
+    <string name="exercise_insert_conflict">Übung mit dem Namen %s bereits vorhanden.</string>
+    <string name="no_exercises_in_routine">Keine Übungen in der Routine gespeichert.</string>
+    <string name="routine_detail_view_routine_name_text">Name der Routine</string>
+    <string name="exerciseconfiguration_exercise_type_text">Typ der Übung</string>
+    <string name="repetition">Wiederholungen</string>
+    <string name="time">Zeit</string>
+    <string name="exerciseconfiguration_configuration_of">Konfiguration: %s</string>
+    <string name="exerciseconfiguration_exercise_repetitions">Anzahl Wiederholungen</string>
+    <string name="exerciseconfiguration_exercise_time">Dauer der Übung</string>
+    <string name="timegetter_minute">Minuten</string>
+    <string name="timegetter_second">Sekunden</string>
+    <string name="routine_detail_options_add">Übung zur Routine hinzufügen</string>
+    <string name="choose_exercise">Wähle deine nächste Übung</string>
+    <string name="exerciseconfiguration_saved">Konfiguration der Übung %s geändert.</string>
+    <string name="delete">Löschen</string>
+    <string name="elapsedtime_title">Abgelaufene Zeit</string>
+    <string name="workout_routine">Workout: %s</string>
+    <string name="start_workout">Starte Workout</string>
+    <string name="current_exercise">Aktuelle Übung</string>
+    <string name="workout_time_total">Total</string>
+    <string name="next_exercise">Nächste</string>
+    <string name="workout_finished">Ende</string>
+    <string name="new_routine">Neue Routine</string>
+    <string name="ok_option">Ok</string>
+    <string name="cancel_option">Abbrechen</string>
+    <string name="new_exercise">Neue Übung</string>
+    <string name="statistics">Statistik</string>
+    <string name="about">Über</string>
+    <string name="delete_workout_short">%s löschen?</string>
+    <string name="workout_time_exercise">Übung</string>
+    <string name="delete_routine_short">%s löschen?</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="history">Verlauf</string>
+    <string name="title_activity_fit_settings">Einstellungen</string>
+    <string name="choose_your_theme">Suche deinen Style aus</string>
+
+    <string name="appearance_preferences">Aussehen</string>
+    <string name="theme_title">Thema</string>
+    <string name="routine_deleted">Routine %s gelöscht</string>
+    <string name="routine_list_options_add">Übung hinzufügen</string>
+    <string name="theme_choose_text">Suche deinen Style aus</string>
+    <string name="advice_theme_title">Hinweis</string>
+    <string name="advice_theme_text">Du hast den Style gewechselt.\nWenn du ihn sofort sehen möchtest, muss die App neu starten.\n</string>
+
+    <string name="text_current_weight">Aktuelles Gewicht</string>
+    <string name="bmi_text">BMI</string>
+    <string name="weight">Gewicht</string>
+    <string name="add_weight_title">Gewicht hinzufügen</string>
+    <string name="no_weight_value">Kein Gewicht angegeben</string>
+    <string name="add_weight_error">Gib eine Zahl für dein Gewicht an</string>
+    <string name="add_weight_message">Trag dein aktuelles Gewicht ein</string>
+    <string name="how_are_you">Dein Name</string>
+    <string name="user_fragment_title">Ich</string>
+    <string name="user_name_hint">Sag mir, wie du heißt</string>
+    <string name="user_size_hint">Deine Größe in cm</string>
+    <string name="duration">Dauer</string>
+    <string name="what_would_you_do">Was willst du tun?</string>
+    <string name="action_copy">Kopieren</string>
+    <string name="action_delete">Löschen</string>
+    <string name="not_started">00:00</string>
+    <string name="workout_pause">Pause</string>
+    <string name="maxrepetitions">Wiederholungen</string>
+    <string name="choosemaxrepetitions">Wieviel Wiederholungen wählst du maximal aus?</string>
+    <string name="stop_workout">Workout wirklich stoppen?</string>
+    <string name="exercise">Übung</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="error_no_exercises">Ohne Übung kein Workout</string>
+    <string name="summary">Zusammenfassung</string>
+    <string name="details">Details</string>
+    <string name="resume_hint_total_time">Gesamtzeit</string>
+    <string name="resume_hint_total_pause">Gesamtpause</string>
+    <string name="exercise_datetime"><![CDATA[Datum & Uhrzeit]]></string>
+    <string name="title_activity_export_import_db">ExportImportDB</string>
+    <string name="hint">Hinweis</string>
+    <string name="description">Hier kannst du dein Beschreibung eintragen</string>
+    <string name="archived">Archiv  </string>
+    <string name="action_copy_description">Das aktuelle Workout wird kopiert</string>
+    <string name="action_delete_description">Das Workout wird gelöscht.</string>
+    <string name="action_archive">Archivieren</string>
+    <string name="action_archive_description">Das aktuelle Workout wird archiviert</string>
+    <string name="action_edit">Bearbeiten</string>
+    <string name="action_edit_description">Passe dein Workout an.</string>
+    <string name="routine_summary">%s Runden</string>
+    <string name="action_dearchive">Aktivieren</string>
+    <string name="action_dearchive_description">Zeige diese Workout wieder</string>
+    <string name="set_info">Satz %s/%s</string>
+    <string name="rounds_info">Runde %s/%s</string>
+    <string name="sets">Sätze %s</string>
+    <string name="routineDetail_rounds">Anzahl der Runden</string>
+    <string name="set_pause">Satzpause in Sekunden</string>
+
+    <string name="spot_new_exercise">Neue Übung</string>
+    <string name="spot_new_exercise_desc">Klick hier drauf und erstelle deine Übungen.\nSpäter kannst du sie in deinen Workouts verwenden.</string>
+    <string name="user_name">Dein Name</string>
+    <string name="weight_hint">Sag mir dein Gewicht und ich kann deinen BMI ausrechnen</string>
+    <string name="user_size">Größe</string>
+    <string name="personal_date">Persönliche Daten</string>
+    <string name="round">Runde</string>
+
+    <string name="spot_new_exercise_configuration">Neue Übung</string>
+    <string name="spot_new_exercise_configuration_desc">Hier kannst du eine deiner Übungen zu deinem Workout hinzufügen.</string>
+    <string name="spot_rename_workout">Name des Workouts</string>
+    <string name="spot_rename_workout_desc">Klick hier drauf und gib deinem Workout einen Namen</string>
+    <string name="spot_workout_rounds_desc">Hier kannst du wählen, wie oft du die Übungen wiederholen willst</string>
+    <string name="spot_workout_pause_desc">Hier kannst du die Pause zwischen deinen Sätzen festlegen</string>
+
+    <!-- Weather -->
+    <string name="ARMS">Arme</string>
+    <string name="CORE">Core</string>
+    <string name="LEGS">Beine</string>
+    <string name="PULL">Ziehen</string>
+    <string name="PUSH">Drücken</string>
+    <string name="BREAST">Brust</string>
+    <string name="SHOULDER">Schulter</string>
+    <string name="LOWER_BACK">Unterer Rücken</string>
+    <string name="UPPER_BACK">Oberer Rücken</string>
+    <string name="youtube_serch_term_description">Suchbegriffe für Youtube</string>
+    <string name="spot_new_routine">Neues Workout</string>
+    <string name="spot_new_routine_desc">Hier kannst du ein Workout hinzufügen</string>
+    <string name="exercise_weight">Gewicht</string>
+    <string name="set">Satz</string>
+    <string name="menu_style">Menüstil</string>
+    <string name="menu_style_summary">Schalte diese Option ein, um das Appmenu auf der linken Seite zu haben.</string>
+    <string name="options">Optionen</string>
+    <string name="reset_options">Hinweise zurücksetzen</string>
+    <string name="reset_options_summary">Klicke hier drauf und du bekommst erneut die Hinweise und Hilfen in der App</string>
+    <string name="menu_style_title">Durch das Ändern des Menüstils wird die App neu gestartet</string>
+    <string name="calendar_swipe_hint">Durch Wischen nach rechts oder links siehst du die Workouts der anderen Monate</string>
+    <string name="welcome">Willkommen</string>
+    <string name="welcome_description">rpz ist ein Trainer, Begleiter, Motivator.\n Er hilft dir dein Training zu organisieren und durch zu ziehen</string>
+    <string name="welcome_exercise">Füge deine Übungen hinzu oder nutze die bereits vorhandenen</string>
+    <string name="welcome_workouts">Erstelle Workouts und trainiere.\n Kontrolliere deine Fortschritte und werde dein besseres Ich</string>
+    <string name="weight_unit_kg">kg</string>
+    <string name="introduce_height">Gib deine Größe in cm ein</string>
+    <string name="empty_name">Leer</string>
+    <string name="sets_hint">Sätze</string>
+    <string name="history_description">Find deine erledigten Workouts</string>
+    <string name="history_month">Alle Workouts %s</string>
+    <string name="configure_it">Konfiguriere Rpz</string>
+    <string name="all_workouts">Alle Workouts</string>
+    <string name="track_your_progress">Tracke deinen Fortschritt</string>
+    <string name="workout_ongoing">Workoutmodus</string>
+    <string name="progress">Verlauf</string>
+    <string name="routine_name">Name des Workouts</string>
+    <string name="rename_workout">Workout umbenennen</string>
+    <string name="rename_workout_desc">Dein Workout umbenennen</string>
+    <string name="skip_over">Überspringen</string>
+    <string name="sign_in">Anmelden</string>
+    <string name="debug">Debug</string>
+    <string name="copy_suffix">Kopie</string>
+    <string name="editor_mode">Editormodus</string>
+</resources>

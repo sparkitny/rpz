@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="rounds">
+        <item quantity="one">
+            round
+        </item>
+        <item quantity="other">
+            rounds
+        </item>
+    </plurals>
+    <plurals name="sets">
+         <item quantity="one">
+            Set
+        </item>
+        <item quantity="other">
+            Sets
+        </item>
+    </plurals>
+    <plurals name="exercises">
+        <item quantity="one">
+            exercise
+        </item>
+        <item quantity="other">
+            exercises
+        </item>
+    </plurals>
+</resources>

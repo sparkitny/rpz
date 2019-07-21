@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/personal_date">
+        <EditTextPreference
+            android:dialogTitle="@string/user_name_hint"
+            android:key="name"
+            android:persistent="true"
+            android:summary="@string/user_name_hint"
+            android:title="@string/user_name" />
+        <EditTextPreference
+            android:dialogTitle="@string/user_size_hint"
+            android:inputType="number"
+            android:key="size"
+            android:persistent="true"
+            android:summary="@string/user_size_hint"
+            android:title="@string/user_size" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/appearance_preferences">
+        <ListPreference
+            android:dialogTitle="@string/choose_your_theme"
+            android:entries="@array/themes_list_names"
+            android:entryValues="@array/themes_list_values"
+            android:key="chosen_theme"
+            android:summary="@string/choose_your_theme"
+            android:title="@string/theme_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/options">
+        <Preference
+            android:key="reset_options"
+            android:title="@string/reset_options"
+            android:summary="@string/reset_options_summary" />
+        <Preference
+            android:key="@string/debug"
+            android:title="@string/debug" />
+        <Preference
+            android:key="about"
+            android:title="@string/about" />
+    </PreferenceCategory>
+</PreferenceScreen>

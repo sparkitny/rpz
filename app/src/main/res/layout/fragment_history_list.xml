@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/myBackColor"
+    android:orientation="vertical">
+
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:elevation="4dp"
+        android:focusable="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:compactCalendarBackgroundColor="?attr/myBackColor"
+        app:compactCalendarCurrentDayBackgroundColor="?attr/myPrimDark"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="?attr/myBackColor"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        app:compactCalendarTextColor="?attr/myTextColor"
+        app:compactCalendarTextSize="12sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/history_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp" />
+
+</LinearLayout>
