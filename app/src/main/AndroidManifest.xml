@@ -15,9 +15,6 @@
         android:theme="@style/Men"
         tools:replace="android:icon,android:theme"
         tools:ignore="GoogleAppIndexingWarning">
-        <meta-data
-            android:name="com.google.android.backup.api_key"
-            android:value="AEdPqrEAAAAI-Sye82qFvV899a3ka-oRLKRem5QMb-vGzXvxcg" />
 
         <activity
             android:name=".ui.RpzNavDrawer"
@@ -35,18 +32,7 @@
             android:enabled="true"
             android:exported="false" />
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="1f832ffb088a3a9a3985a5fc46d2295d2a33d539" />
-
         <activity android:name=".ui.showcase.ShowcaseActivity">
-
-            <!-- <intent-filter> -->
-            <!-- <action andrfirstLinename="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category andrfirstLinename="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
         </activity>
 
         <receiver
